@@ -29,18 +29,12 @@ class RecipeListFragment: Fragment() {
 
 
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        println("Fragment: ${viewModel.getRandomString()}")
-        println("Fragment: ${viewModel.getRepo()}")
-        println("Fragment: ${viewModel.getToken()}")
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+
         return ComposeView(requireContext()).apply {
             setContent {
                 Column(modifier = Modifier.padding(16.dp)) {
