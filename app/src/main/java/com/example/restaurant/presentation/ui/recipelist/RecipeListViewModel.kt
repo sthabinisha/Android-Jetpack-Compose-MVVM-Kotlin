@@ -11,13 +11,21 @@ class RecipeListViewModel
     constructor(
     private val randomString: String,
     private val repository:RecipeRepository,
+    private val token:String,
 
 
     ): ViewModel(){
         init {
 
             println( "VIEWMODEL: $randomString")
+            println( "VIEWMODEL: $repository")
+            println( "VIEWMODEL: $token")
             }
+
+    fun getRepo() = repository
+    fun getRandomString() = randomString
+
+    fun getToken() = token
         }
 
 
