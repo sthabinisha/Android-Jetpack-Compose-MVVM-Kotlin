@@ -1,6 +1,7 @@
 package com.example.restaurant.presentation.ui.recipelist
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -19,6 +20,7 @@ import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
 import com.example.restaurant.R
+import com.example.restaurant.util.TAG
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
@@ -37,6 +39,12 @@ class RecipeListFragment: Fragment() {
 
         return ComposeView(requireContext()).apply {
             setContent {
+
+                val recipes = viewModel.recipes.value
+
+                for(recipe in recipes){
+                    Log.d(TAG, "onCreateView: ${recipe.title}")
+                }
                 Column(modifier = Modifier.padding(16.dp)) {
                     Text(
                         text = "RecipeList",
