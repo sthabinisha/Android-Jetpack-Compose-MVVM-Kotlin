@@ -1,7 +1,7 @@
 package com.example.restaurant.di
 
 import android.content.Context
-import com.example.restaurant.presentation.ui.BaseApplication
+import com.example.restaurant.presentation.BaseApplication
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

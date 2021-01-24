@@ -1,9 +1,10 @@
-package com.example.restaurant.presentation.ui
+package com.example.restaurant.presentation
 
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.restaurant.R
+import com.example.restaurant.presentation.BaseApplication
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
